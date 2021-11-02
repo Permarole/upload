@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     $fileName = $_FILES['file']['tmp_name'];
 
-    $extensions_ok = ['jpg', 'webp', 'png'];
+    $extensions_ok = ['jpg', 'webp', 'png', 'gif'];
 
     $maxFileSize = 1000000;
 
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     if ((!in_array($extension, $extensions_ok))) {
 
-        $errors[] = 'Veuillez sélectionner une image de type Jpg ou Webp ou Png !';
+        $errors[] = 'Veuillez sélectionner une image de type Jpg ou Webp ou Png ou Gif !';
     }
 
     /****** On vérifie si l'image existe et si le poids est autorisé en octets *************/
